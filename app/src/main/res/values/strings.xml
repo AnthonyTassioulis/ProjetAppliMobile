@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Test1</string>
+    <string name="bienvenue">Bienvenue dans notre établissement</string>
+    <string name="nomresto">Restaurant Le Cheval de Briques</string>
+    <string name="menuprincipal">Faites votre choix</string>
+    <string name="menu">Menu</string>
+    <string name="carte">À la carte</string>
+    <string name="plat">Plat</string>
+    <string name="commande">Voir la commande</string>
+    <string name="commande2">Procéder à la commande</string>
+</resources>

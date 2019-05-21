@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".Carte"
+    android:background="@drawable/fond"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/carte_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/carte"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/carte_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_below="@+id/carte_text"
+            >
+
+
+        </ListView>
+
+        <Button
+            android:id="@+id/commande"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/carte_list"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/liste_logo"
+            android:text="@string/commande"
+            android:textAlignment="textStart"
+            android:textColor="@color/bleu"
+            android:textSize="40sp"
+            android:textStyle="normal"
+
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

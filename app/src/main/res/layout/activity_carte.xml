@@ -24,23 +24,41 @@
             android:textSize="60sp"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ListView
-            android:id="@+id/carte_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/entreeButton"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:onClick="goToEntree"
+            android:layout_marginTop="300dp"
+            android:layout_centerHorizontal="true"
+            android:text="Entrées"
+            android:textSize="25dp"/>
 
+        <Button
+            android:id="@+id/platButton"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:onClick="goToPlat"
+            android:layout_marginTop="425dp"
+            android:layout_centerHorizontal="true"
+            android:text="Plats"
+            android:textSize="25dp"/>
 
-            android:layout_below="@+id/carte_text"
-            >
-
-
-        </ListView>
+        <Button
+            android:id="@+id/dessertButton"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:onClick="goToDessert"
+            android:layout_marginTop="550dp"
+            android:layout_centerHorizontal="true"
+            android:text="Desserts"
+            android:textSize="25dp"/>
 
         <Button
             android:id="@+id/commande"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_below="@+id/carte_list"
+
             android:layout_alignParentBottom="true"
             android:background="@drawable/liste_logo"
             android:text="@string/commande"

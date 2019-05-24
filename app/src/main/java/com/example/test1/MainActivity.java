@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String DB_NAME = "App.db";
     private static final String TABLE_NAME1 = "produit";
     private static final String TABLE_NAME2= "menu";
-    private static final String TABLE_NAME3 = "panier";
+    private static final String TABLE_NAME3 = "commande";
     private SQLiteDatabase db;
 
     @Override
@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         db = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME1 + "(id1 INTEGER PRIMARY KEY AUTOINCREMENT, " + "nom TEXT,type TEXT, temperature TEXT, prix int);");
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME2 + "(id2 INTEGER PRIMARY KEY AUTOINCREMENT, " + "Entrée TEXT,plat TEXT, dessert TEXT, prix int);");
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME3 + "(id3 INTEGER PRIMARY KEY AUTOINCREMENT, " + "nom TEXT, prix int);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME1 + "(id1 INTEGER PRIMARY KEY AUTOINCREMENT, " + "nom TEXT,type TEXT, temperature TEXT, prix FLOAT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME2 + "(id2 INTEGER PRIMARY KEY AUTOINCREMENT, " + "Entrée TEXT,plat TEXT, dessert TEXT, prix FLOAT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME3 + "(id3 INTEGER PRIMARY KEY AUTOINCREMENT, " + "numero TEXT, prix FLOAT);");
 
         db.close();
 

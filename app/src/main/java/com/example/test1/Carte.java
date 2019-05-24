@@ -8,7 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.example.test1.adapters.ProduitAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 public class Carte extends AppCompatActivity {
 
     private Button commande;
+
     private SQLiteDatabase db;
     private Cursor req;
 
@@ -34,33 +36,26 @@ public class Carte extends AppCompatActivity {
                 startActivity(otherActivity);
                 finish();
 
-                db = openOrCreateDatabase("App.db", MODE_PRIVATE,null);
-                req = db.rawQuery("SELECT * FROM Tache ORDER BY type", null);
-
-
-                List<Element> elementList = new ArrayList<>();
-
-                if(req != null && req.getCount()>0)
-
-                {
-                    while(req.moveToNext())
-                    {
-                        elementList.add(new Element(req.getInt(req.getColumnIndex("id")),req.getString(req.getColumnIndex("actions")),req.getString(req.getColumnIndex("date")),req.getString(req.getColumnIndex("duree"))));
-                    }
-
-                    db.close();
-                    ListView elementListView = findViewById(R.id.carte_list);
-                    elementListView.setAdapter(new ElementAdapter(this, elementList));
-
-                }
-
-
-
-
-                db.close();
-
-
             }
         });
+
+    }
+
+    public void goToEntree(View view)
+    {
+        Intent goToEntree = new Intent(Carte.this, Entree.class);
+        startActivityForResult(goToEntree, 1);
+    }
+
+    public void goToPlat(View view)
+    {
+        Intent goToPlat = new Intent(Carte.this, Plat.class);
+        startActivityForResult(goToPlat, 1);
+    }
+
+    public void goToDessert(View view)
+    {
+        Intent goToDessert = new Intent(Carte.this, Dessert.class);
+        startActivityForResult(goToDessert, 1);
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Entree"
+    android:background="@drawable/fond">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/platF"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:text="Plats froids"/>
+
+        <ListView
+            android:id="@+id/listPlatF"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/platF"></ListView>
+
+        <TextView
+            android:id="@+id/platC"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/listPlatF"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:text="Plats chauds"/>
+
+        <ListView
+            android:id="@+id/listPlatC"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/platC"></ListView>
+
+        <Button
+            android:id="@+id/commande"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:layout_alignParentBottom="true"
+
+            android:background="@drawable/liste_logo"
+            android:text="@string/commande"
+            android:textAlignment="textStart"
+
+
+            android:textColor="@color/bleu"
+            android:textSize="40sp"
+            android:textStyle="normal"
+
+            android:layout_below="@+id/listPlatC" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

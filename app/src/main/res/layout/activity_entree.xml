@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Entree"
+    android:background="@drawable/fond">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/entreeF"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:text="Entrée froide"/>
+
+        <ListView
+            android:id="@+id/listEntreeF"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/entreeF"></ListView>
+
+        <TextView
+            android:id="@+id/entreeC"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/listEntreeF"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:text="Entrée chaude"/>
+
+        <ListView
+            android:id="@+id/listEntreeC"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/entreeC"></ListView>
+
+        <Button
+            android:id="@+id/commande"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:layout_alignParentBottom="true"
+
+            android:background="@drawable/liste_logo"
+            android:text="@string/commande"
+            android:textAlignment="textStart"
+
+
+            android:textColor="@color/bleu"
+            android:textSize="40sp"
+            android:textStyle="normal"
+
+            android:layout_below="@+id/listEntreeC" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

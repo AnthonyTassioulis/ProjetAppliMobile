@@ -21,6 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.test1.Dessert" />
+        <activity android:name="com.example.test1.Plat" />
+        <activity android:name="com.example.test1.Entree" />
         <activity android:name="com.example.test1.Boisson" />
         <activity android:name="com.example.test1.Commande" />
         <activity android:name="com.example.test1.Carte" />

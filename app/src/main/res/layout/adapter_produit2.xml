@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/produitNom"
+            android:layout_width="235dp"
+            android:layout_height="59dp" />
+
+        <TextView
+            android:id="@+id/produitPrix"
+            android:layout_width="212dp"
+            android:layout_height="59dp"
+            android:layout_toEndOf="@+id/produitNom"/>
+
+        <Button
+            android:id="@+id/produitAdd"
+            android:layout_width="155dp"
+            android:layout_height="59dp"
+            android:text="Ajouter"
+            android:onClick="produitAdd"
+            android:layout_toEndOf="@+id/produitPrix"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

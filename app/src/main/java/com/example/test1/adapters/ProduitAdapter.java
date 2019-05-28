@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.test1.DatabaseHelper;
 import com.example.test1.Produit;
 import com.example.test1.R;
 
@@ -18,11 +19,16 @@ public class ProduitAdapter extends BaseAdapter {
     private List<Produit> produitList;
     private LayoutInflater inflater;
 
+    DatabaseHelper db;
+
+
     public ProduitAdapter(Context context, List<Produit> produitList)
     {
         this.context = context;
         this.produitList = produitList;
         this.inflater = LayoutInflater.from(context);
+
+        db = new DatabaseHelper(context);
     }
 
     @Override
@@ -45,24 +51,32 @@ public class ProduitAdapter extends BaseAdapter {
 
         view = inflater.inflate(R.layout.adapter_produit, null);
 
-        Produit currentItem = getItem(position);
+        final Produit currentItem = getItem(position);
 
-        int id1 = currentItem.getId1();
+        int id = currentItem.getId();
         String nom = currentItem.getNom();
         String type = currentItem.getType();
         String temperature = currentItem.getTemperature();
-        Float prix = currentItem.getPrix();
+        Double prix = currentItem.getPrix();
 
-
+        TextView produitIdView = (TextView) view.findViewById(R.id.idProduit);
+        produitIdView.setText(String.valueOf(currentItem.getId()));
 
         TextView produitNameView = (TextView) view.findViewById(R.id.produitNom);
         produitNameView.setText(nom);
 
         TextView produitPriceView = (TextView) view.findViewById(R.id.produitPrix);
-        produitPriceView.setText(""+prix);
+        produitPriceView.setText(String.valueOf(currentItem.getPrix())+"€");
 
         Button produitSupprimer = (Button) view.findViewById(R.id.produitSupp);
 
+        produitSupprimer.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                db.suppCommander(currentItem.getId());
+            }
+        });
 
         return view;
     }

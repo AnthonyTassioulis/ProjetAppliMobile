@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAlignment="center"
+
             android:textSize="25sp"
             android:text="Entrée froide"/>
 
@@ -23,7 +24,9 @@
             android:id="@+id/listEntreeF"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_below="@id/entreeF"></ListView>
+            android:layout_below="@id/entreeF">
+
+        </ListView>
 
         <TextView
             android:id="@+id/entreeC"
@@ -38,7 +41,9 @@
             android:id="@+id/listEntreeC"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_below="@id/entreeC"></ListView>
+            android:layout_below="@id/entreeC">
+
+        </ListView>
 
         <Button
             android:id="@+id/commande"

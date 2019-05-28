@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/idMenu2"
+            android:layout_width="100dp"
+            android:layout_height="59dp" />
+
+        <TextView
+            android:id="@+id/menuNom2"
+            android:layout_width="235dp"
+            android:layout_height="59dp"
+            android:layout_toEndOf="@+id/idMenu2"/>
+
+        <TextView
+            android:id="@+id/menuPrix2"
+            android:layout_width="100dp"
+            android:layout_height="59dp"
+            android:layout_toEndOf="@+id/menuNom2"/>
+
+        <Button
+            android:id="@+id/menuAdd"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:text="Ajouter"
+            android:onClick="menuAdd2"
+            android:layout_toEndOf="@+id/menuPrix2"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

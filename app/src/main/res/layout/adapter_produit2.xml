@@ -11,23 +11,29 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/produitNom"
-            android:layout_width="235dp"
+            android:id="@+id/idProduit2"
+            android:layout_width="100dp"
             android:layout_height="59dp" />
 
         <TextView
-            android:id="@+id/produitPrix"
-            android:layout_width="212dp"
+            android:id="@+id/produitNom2"
+            android:layout_width="235dp"
             android:layout_height="59dp"
-            android:layout_toEndOf="@+id/produitNom"/>
+            android:layout_toEndOf="@+id/idProduit2"/>
+
+        <TextView
+            android:id="@+id/produitPrix2"
+            android:layout_width="100dp"
+            android:layout_height="59dp"
+            android:layout_toEndOf="@+id/produitNom2"/>
 
         <Button
             android:id="@+id/produitAdd"
-            android:layout_width="155dp"
-            android:layout_height="59dp"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
             android:text="Ajouter"
-            android:onClick="produitAdd"
-            android:layout_toEndOf="@+id/produitPrix"/>
+            android:onClick="produitAdd2"
+            android:layout_toEndOf="@+id/produitPrix2"/>
 
     </RelativeLayout>
 

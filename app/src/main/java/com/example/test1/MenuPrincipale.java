@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MenuPrincipale extends AppCompatActivity {
@@ -13,42 +14,35 @@ public class MenuPrincipale extends AppCompatActivity {
     private Button carte;
     private Button boissons;
 
+    private TextView commande;
+    DatabaseHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principale);
 
-        this.menu = (Button) findViewById(R.id.menu);
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent otherActivity = new Intent(getApplicationContext(),Menu.class);
-                startActivity(otherActivity);
-                finish();
-            }
-        });
 
-        this.carte = (Button) findViewById(R.id.carte);
-        carte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent otherActivity = new Intent(getApplicationContext(),Carte.class);
-                startActivity(otherActivity);
-                finish();
-            }
-        });
+    }
 
-        this.boissons = findViewById(R.id.boissons);
-        boissons.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent otherActivity = new Intent (getApplicationContext(), Boisson.class);
-                startActivity(otherActivity);
-                finish();
-
-            }
-        });
+    public void goToMenu(View view)
+    {
+        Intent Menu = new Intent(MenuPrincipale.this, Menu.class);
+        startActivityForResult(Menu, 1);
+    }
+    public void goToCarte(View view)
+    {
+        Intent Carte = new Intent(MenuPrincipale.this, Carte.class);
+        startActivityForResult(Carte, 2);
+    }
+    public void goToBoisson(View view)
+    {
+        Intent Boisson = new Intent(MenuPrincipale.this, Boisson.class);
+        startActivityForResult(Boisson, 3);
+    }
+    public void goToCommande(View view)
+    {
+        Intent Commande = new Intent(MenuPrincipale.this, Commande.class);
+        startActivityForResult(Commande, 4);
     }
 }

@@ -1,13 +1,21 @@
 package com.example.test1;
 
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import com.example.test1.adapters.ProduitAdapter2;
+
+import java.util.ArrayList;
 
 public class Boisson extends AppCompatActivity {
 
+
+    ArrayList<Produit> listBoisson = new ArrayList<>();
+
+    DatabaseHelper db;
     private Button commande;
 
     @Override
@@ -15,18 +23,19 @@ public class Boisson extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boisson);
 
-        this.commande = findViewById(R.id.commande);
-        commande.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent otherActivity = new Intent (getApplicationContext(), Commande.class);
-                startActivity(otherActivity);
-                finish();
 
-            }
-        });
+
+        db = new DatabaseHelper(getApplicationContext());
+
+        listBoisson = db.getProduit("boisson", "froid");
+
+
+        ListView boissonList = findViewById(R.id.boisson_list);
+        boissonList.setAdapter(new ProduitAdapter2(this, listBoisson));
+
+
+
+
     }
 
 

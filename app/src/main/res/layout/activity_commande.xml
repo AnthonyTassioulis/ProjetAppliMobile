@@ -23,11 +23,39 @@
             android:textSize="60sp"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ListView
-            android:id="@+id/commande_list"
+        <TextView
+            android:id="@+id/produits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/commande_text"
+            android:text="Produits"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/commande_text"/>
+
+        <ListView
+            android:id="@+id/commande_produits"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_below="@+id/produits"
+            >
+
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/menus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menus"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/commande_produits"/>
+
+        <ListView
+            android:id="@+id/commande_menus"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_below="@+id/menus"
             >
 
 
@@ -35,16 +63,25 @@
 
         <Button
             android:id="@+id/Pcommande"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="100dp"
-
+            android:onClick="passerCommande"
             android:layout_alignParentBottom="true"
             android:text="@string/commande2"
             android:textColor="@color/bleu"
-            android:textSize="40sp"
+            android:textSize="20sp"
+            android:layout_below="@+id/commande_menus"
             app:layout_constraintBottom_toBottomOf="parent"
 
             />
+
+        <TextView
+            android:id="@+id/prix"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/commande_menus"
+            android:layout_toEndOf="@+id/Pcommande"
+            android:textSize="25dp"/>
     </RelativeLayout>
 
 

@@ -33,6 +33,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="goToCarte"
         android:text="Carte"
         app:layout_constraintBottom_toTopOf="@+id/boissons"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -46,6 +47,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="goToMenu"
         android:text="Menus"
         app:layout_constraintBottom_toTopOf="@+id/boissons"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -60,10 +62,27 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:onClick="goToBoisson"
         android:text="Boissons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/commande"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/liste_logo"
+        android:text="@string/commande"
+        android:onClick="goToCommande"
+        android:textAlignment="textStart"
+        android:textColor="@color/bleu"
+        android:textSize="40sp"
+        android:textStyle="normal"
+
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

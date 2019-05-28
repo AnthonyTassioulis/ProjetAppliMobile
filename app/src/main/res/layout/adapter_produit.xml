@@ -11,20 +11,26 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/produitNom"
-            android:layout_width="235dp"
+            android:id="@+id/idProduit"
+            android:layout_width="100dp"
             android:layout_height="59dp" />
 
         <TextView
+            android:id="@+id/produitNom"
+            android:layout_width="300dp"
+            android:layout_height="59dp"
+            android:layout_toEndOf="@+id/idProduit"/>
+
+        <TextView
             android:id="@+id/produitPrix"
-            android:layout_width="212dp"
+            android:layout_width="100dp"
             android:layout_height="59dp"
             android:layout_toEndOf="@+id/produitNom"/>
 
         <Button
             android:id="@+id/produitSupp"
-            android:layout_width="155dp"
-            android:layout_height="59dp"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
             android:text="Retirer"
             android:onClick="produitSupp"
             android:layout_toEndOf="@+id/produitPrix"/>

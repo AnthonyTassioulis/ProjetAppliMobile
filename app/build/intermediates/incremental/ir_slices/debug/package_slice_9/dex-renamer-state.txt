@@ -1,4 +1,0 @@
-#Fri May 17 23:52:45 CEST 2019
-base.0=C\:\\Users\\nytho\\Desktop\\Cours\\BAC 3\\Appli mobile\\Projet_Appli_Mobile\\Projet_Appli_Mobile\\test android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
-path.0=classes.dex
-renamed.0=classes.dex

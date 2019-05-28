@@ -2,27 +2,30 @@ package com.example.test1;
 
 public class Produit {
 
-    private int id1;
+    private int id;
     private String nom;
-    private String type;
+    private Double prix;
     private String temperature;
-    private Float prix;
+    private String type;
 
-public Produit(int id1,String nom, String type, String temperature, Float prix){
 
-    this.id1 = id1;
+public Produit(int id,String nom, Double prix, String temperature, String type){
+
+    this.id = id;
     this.nom = nom;
-    this.type = type;
-    this.temperature = temperature;
     this.prix = prix;
+    this.temperature = temperature;
+    this.type = type;
+
+
 }
-public int getId1() {return id1;}
+public int getId() {return id;}
 
 public String getNom(){return nom;}
 
-public String getType() {return type;}
+public Double getPrix(){return prix;}
 
 public String getTemperature() {return temperature;}
 
-public Float getPrix(){return prix;}
+public String getType() {return type;}
 }

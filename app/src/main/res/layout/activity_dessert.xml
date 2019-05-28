@@ -12,33 +12,37 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/entreeF"
+            android:id="@+id/dessertF"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAlignment="center"
             android:textSize="25sp"
-            android:text="Entrée froide"/>
+            android:text="Desserts froids"/>
 
         <ListView
-            android:id="@+id/listEntreeF"
+            android:id="@+id/listDessertF"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_below="@id/entreeF"></ListView>
+            android:layout_below="@id/dessertF">
+
+        </ListView>
 
         <TextView
-            android:id="@+id/entreeC"
+            android:id="@+id/dessertC"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/listEntreeF"
+            android:layout_below="@+id/listDessertF"
             android:textAlignment="center"
             android:textSize="25sp"
-            android:text="Entrée chaude"/>
+            android:text="Desserts chauds"/>
 
         <ListView
-            android:id="@+id/listEntreeC"
+            android:id="@+id/listDessertC"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_below="@id/entreeC"></ListView>
+            android:layout_below="@id/dessertC">
+
+        </ListView>
 
         <Button
             android:id="@+id/commande"
@@ -56,7 +60,7 @@
             android:textSize="40sp"
             android:textStyle="normal"
 
-            android:layout_below="@+id/listEntreeC" />
+            android:layout_below="@+id/listDessertC" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

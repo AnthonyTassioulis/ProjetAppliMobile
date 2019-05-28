@@ -24,7 +24,9 @@ public class Commande extends AppCompatActivity {
 
     DatabaseHelper db;
 
-
+private String destinataire = "flo.duboquet@gmail.com";
+private String sujet = "commande table 4";
+private String textMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,22 @@ public class Commande extends AppCompatActivity {
     }
 
     public void passerCommande(View view)
-    {}
+    {
+
+        Sendmail();
+    }
+
+    private void Sendmail (){
+
+        textMessage = ;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL,destinataire);
+        intent.putExtra(Intent.EXTRA_SUBJECT,sujet);
+        intent.putExtra(Intent.EXTRA_TEXT,textMessage);
+
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, "please choose Gmail"));
+
+    }
 
 }

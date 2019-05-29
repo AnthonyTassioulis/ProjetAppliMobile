@@ -222,6 +222,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
+
+
+
+
+
+
     public ArrayList<MenuC> getAllMenu()
     {
         SQLiteDatabase db = this.getReadableDatabase();

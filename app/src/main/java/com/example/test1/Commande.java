@@ -11,7 +11,9 @@ import android.widget.TextView;
 import com.example.test1.adapters.MenuCAdapter;
 import com.example.test1.adapters.ProduitAdapter;
 
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Commande extends AppCompatActivity {
@@ -58,11 +60,32 @@ private String textMessage;
     {
 
         Sendmail();
+        setContentView(R.layout.activity_main);
     }
 
     private void Sendmail (){
 
-        textMessage = ;
+
+
+        Iterator<Produit> it = produitList.iterator();
+
+        while (it.hasNext()) {
+           String temp = null;
+           temp = it.getName();
+           textMessage += temp + " ";
+        }
+
+
+
+        Iterator<MenuC> it1 = menuList.iterator();
+
+        while (it.hasNext()) {
+            String temp = null;
+            temp = it1.getName();
+            textMessage += temp + " ";
+        }
+
+
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_EMAIL,destinataire);
         intent.putExtra(Intent.EXTRA_SUBJECT,sujet);

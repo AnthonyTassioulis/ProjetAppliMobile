@@ -69,21 +69,28 @@ private String textMessage;
 
         Iterator<Produit> it = produitList.iterator();
 
-        while (it.hasNext()) {
-           String temp = null;
-           temp = it.getName();
-           textMessage += temp + " ";
-        }
+            for(int i = 0; i<produitList.size();i++) {
+                Produit temp1 = null;
+                String temp2 = null;
+                temp1 =  produitList.get(i);
+                temp2 = temp1.getNom();
+                textMessage += temp2 + " ";
+             }
 
 
 
         Iterator<MenuC> it1 = menuList.iterator();
 
-        while (it.hasNext()) {
-            String temp = null;
-            temp = it1.getName();
-            textMessage += temp + " ";
+        for(int i = 0; i<menuList.size();i++) {
+            MenuC temp1 = null;
+            String temp2 = null;
+            temp1 =  menuList.get(i);
+            temp2 = temp1.getName();
+            textMessage += temp2 + " ";
         }
+
+
+
 
 
         Intent intent = new Intent(Intent.ACTION_SEND);
